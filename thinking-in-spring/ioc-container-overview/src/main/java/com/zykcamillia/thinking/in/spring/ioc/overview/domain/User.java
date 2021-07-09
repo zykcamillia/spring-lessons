@@ -1,0 +1,47 @@
+package com.zykcamillia.thinking.in.spring.ioc.overview.domain;
+
+/**
+ * 用户类
+ *
+ * @Author: zhaoyk
+ * @Date: 2021/5/20 15:36
+ * @Description:
+ */
+public class User {
+
+    private Long id;
+
+    private String name;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    public static User createUser(){
+        User user = new User();
+        user.setId(1l);
+        user.setName("camillia");
+        return user;
+    }
+
+}
